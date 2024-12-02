@@ -6,6 +6,9 @@ export default function Home() {
     <Container className="py-20">
       <h1>Ecommerce Website</h1>
       <Button>Click me</Button>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, unde!
+      </p>
     </Container>
   );
 }
