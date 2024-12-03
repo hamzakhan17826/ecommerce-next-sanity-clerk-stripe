@@ -1,14 +1,13 @@
 import Container from "@/components/Container";
+import DiscountBanner from "@/components/DiscountBanner";
 import { Button } from "@/components/ui/button";
+import { getSale } from "@/sanity/helpers";
 
-export default function Home() {
+export default async function Home() {
+  const sales = await getSale();
   return (
-    <Container className="py-20">
-      <h1>Ecommerce Website</h1>
-      <Button>Click me</Button>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, unde!
-      </p>
-    </Container>
+    <div>
+      <DiscountBanner sales={sales} />
+    </div>
   );
 }
